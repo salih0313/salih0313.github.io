@@ -48,6 +48,13 @@ section .title {
     color: white;
 }
 
+.summary .list li i {
+    display: none;
+}
+
+
+/*
+// List style removed...
 .summary .list{
     margin: 0;
     padding: 0;
@@ -63,7 +70,6 @@ section .title {
     transition: all .7s ease-in-out;
 
 }
-
 .summary .list:hover li{
     display: block;
     padding: 0;
@@ -80,4 +86,67 @@ section .title {
 
 .summary .list:hover li i{
     display: inline;
+} */
+
+.experi-year {
+    font-weight: 700;
+    color: orange;
+    font-size: 12px !important;
+}
+.experi-comp {
+    font-size: 12px !important;
+}
+
+/* Accordian changes */
+.accordion-item {
+    margin: 10px auto;
+    background: rgba(255, 255,255, 0.1);
+    border: 1px solid rgba(255, 255,255, 0.25) !important;
+    border-top: 1px solid rgba(255, 255,255, 0.5) !important;
+    border-left: 1px solid rgba(255, 255,255, 0.5) !important;
+    box-shadow: 0 15px 25px rgb(0 0 0 / 5%);
+    backdrop-filter: blur(4px);
+    color: white;
+    border-radius: 10px !important;
+}
+.accordion-item .accordion-header {
+    padding: 10px;
+    position: relative;
+}
+.accordion-item .accordion-header .indicator {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    animation: arrow-movement 2s ease-in-out infinite;
+    display: none;
+}
+
+.accordion-item .accordion-header:hover .collapsed .indicator{
+    display: block;
+}
+
+.accordion-item  .accordion-header:hover .indicator{
+    display: none;
+}
+.accordion-item .accordion-body {
+    background: #0b172b73;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top: 1px solid;
+}
+
+/* // Animation */
+@keyframes arrow-movement {
+    0% { 
+        opacity: 0;
+        top: 45%;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+    }
 }
